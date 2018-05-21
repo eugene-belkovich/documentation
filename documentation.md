@@ -47,6 +47,8 @@
 ----------
 # <a name="events"></a> Event model
 
+Изменения в приложении проиходит посредством pub/sub (событийной) модели. Есть при типа событий: Event, Document, Command. У каджого типа свое назначение и правило к именованиию.
+
 Event types:
 
  - [Event](#event)
@@ -54,13 +56,41 @@ Event types:
  - [Command](#Command)
  
  ### <a name="event"></a> Event
-  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+ ##### Naming
+ ``'event.<domain>.<verb>'``
+ 
+ Domain - предметная область.
+ 
+ Verb - действие которое будет сделано. Используется глагол в прошедшем времени
+ 
+ Например:
+  ``'event.invite.opened'`` - событие означающее что invite был открыт
+
+ 
+ ##### Target
+
+Используется для измения состояния приложения, например после изменения состояния виджетов или результат выполнения алгоритма. Источник событий никогда не должен ожидать на них какой-либо реакции.
+Часто используется после Command, чтобы изменить состояние приложения.
+
   
  ### <a name="document"></a> Document
   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
   
  ### <a name="command"></a> Command
-  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+ ##### Naming
+ ``'command.<domain>.<verb>'``
+ 
+ Domain - предметная область.
+ 
+ Verb - действие которое нужно сделать. Используется глагол в настоящем времени
+ 
+ Например:
+  ``'command.events.send''`` - событие означающее что events были посланы
+
+ 
+ ##### Target
+
+Используется для внутрисистемных действий, которые вызваны или слушаются из вне или самой системой. Например получение или посылка данных по api, кодирование параметров запроса.
 
 
 ----------
