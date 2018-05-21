@@ -1,3 +1,3 @@
-#High level architecture
+# High level architecture
 
 ![alt text](high-level-architecture.png)

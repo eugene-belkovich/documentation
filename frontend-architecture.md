@@ -1,3 +1,3 @@
-#Front end architecture
+# Front end architecture
 
 ![alt text](frontend-architecture.png)
