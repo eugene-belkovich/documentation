@@ -74,8 +74,21 @@ Event types:
 
   
  ### <a name="document"></a> Document
-  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+ ##### Naming
+  ``'document.<domain>.<adjective or noun>'``
   
+  Domain - предметная область.
+  
+  Adjective or noun - используется прилагательное или существительное для констатирования состояния сущности которая передается. действие которое будет сделано. Используется глагол в прошедшем времени
+  
+  Например:
+   ``'document.dialogs.streams`` - событие которое просто передает все streams из dialogs
+ 
+  
+  ##### Target
+ 
+Сообщения использующиеся только для передачи состояния системы. 
+ 
  ### <a name="command"></a> Command
  ##### Naming
  ``'command.<domain>.<verb>'``
@@ -85,7 +98,7 @@ Event types:
  Verb - действие которое нужно сделать. Используется глагол в настоящем времени
  
  Например:
-  ``'command.events.send''`` - событие означающее что events были посланы
+  ``'command.events.send'''`` - событие означающее что events были посланы
 
  
  ##### Target
