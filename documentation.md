@@ -6,8 +6,9 @@
 
 ----------
 # <a name="intro"></a> Introduction
- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 
+Это документация для self-made фреймворка испольемого на проекте dating-express.
+ 
 ----------
 # <a name="components"></a> Components
 
@@ -23,6 +24,24 @@
   
  ### <a name="repository"></a> Repository
   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+
+ ### <a name="repository"></a> Component lifecycle
+ Это структура компонента:
+ 
+```
+/**
+ * Отвечает за инициализацию аналитики форм
+ */
+define(function (require, exports) {
+    'use strict';
+
+    exports.ч  = function (container) {
+        analytics.init(config, container);
+    };
+});
+
+```
+У каждого компонента есть метод `create` который отрабатывает один раз. Linker когда анализирует код, то создает подключенные к страницам `component` и в этот момент выполняет `create`.
 
 ----------
 # <a name="modules"></a> Modules
